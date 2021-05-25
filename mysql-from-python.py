@@ -24,3 +24,6 @@ try:
 finally:
     #Close the connection, regardless of whether the above was successful
     connection.close()
+
+#git rm -r --cached Chinook_MySql_AutoIncrementPKs.sql
+#echo '*.sql' >> .gitignore
