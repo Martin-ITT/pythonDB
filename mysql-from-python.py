@@ -45,7 +45,7 @@ finally:
 
 """
 cursor returnig dictionary
-"""
+
 try:
     #Run a query
     with connection.cursor(pymysql.cursors.DictCursor) as cursor:
@@ -59,5 +59,25 @@ finally:
     connection.close()
 
 """
+"""
 create a table
+
+#mysql-ctl start
+#mysql -u $C9_USER -p
+
+try:
+    #Run a query
+    with connection.cursor() as cursor:
+        cursor.execute("""CREATE TABLE IF NOT EXISTS
+                        Friends(name char(20), age int, DOB datetime);""")
+        #note that the above will still display a warning not error if the
+        # table already exists
+
+finally:
+    #Close the connection, regardless of whether the above was successful
+    connection.close()
+
+mysql -u $C9_USER -p
+use Chinook
+select * from Friends
 """
