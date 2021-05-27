@@ -104,3 +104,9 @@ select GenreID from Genre where Name = 'Rock';
 
 insert into Track (Name, AlbumId, MediaTypeId, GenreId, Composer, Milliseconds, Bytes, UnitPrice)
 values ("I Will Follow", 348, 2, 1, 'U2', 220000, 1234, 0.99);
+
+--When using gitpod, you do not need to use "sudo" in your commands.
+--For example when the instructor uses the command:
+--sudo pip3 install pymysql
+--You can use this instead:
+--pip3 install pymysql
